@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>dvic</title>
+  </head>
+  <body>
+    <div id="app">
+    	<router-view></router-view>
+    </div>
+    <!-- built files will be auto injected -->
+	<script src=”https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script>
+
+    	var Home = { template: "<div> <h1> Home </h1> </div>"};
+    	var About = { template: "<div> <h1> About </h1> </div>"};
+    	var routes =[
+    	{ path: '/home', component: Home},
+    	{ path: '/about', component: About}
+    	];
+
+    	var router = new VueRouter({
+    		routes: routes
+    	});
+    	var app = new Vue({
+    		router: router,
+    		el: '#app'
+    	});
+    </script>
+  </body>
+</html>
